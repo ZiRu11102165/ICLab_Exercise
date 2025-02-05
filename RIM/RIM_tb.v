@@ -1,5 +1,5 @@
 `timescale  1ns / 1ps
-`include "RIM2.v"
+`include "RIM.v"
 module tb_RIM;
 
 // RIM Parameters
@@ -41,14 +41,13 @@ begin
     #10;
     maze = 8'b10000000; in_valid=1; #10; in_valid=0; #10;
     maze = 8'b11110000; in_valid=1; #10; in_valid=0; #10;
-    maze = 8'b01010000; in_valid=1; #10; in_valid=0; #10;
-    maze = 8'b01011000; in_valid=1; #10; in_valid=0; #10;
-    maze = 8'b01001100; in_valid=1; #10; in_valid=0; #10;
-    maze = 8'b01000110; in_valid=1; #10; in_valid=0; #10;
-    maze = 8'b01000010; in_valid=1; #10; in_valid=0; #10;
-    maze = 8'b00000011; in_valid=1; #10; in_valid=0; #20;
-    #200;
-    
+    maze = 8'b01011111; in_valid=1; #10; in_valid=0; #10;
+    maze = 8'b01011111; in_valid=1; #10; in_valid=0; #10;
+    maze = 8'b01001111; in_valid=1; #10; in_valid=0; #10;
+    maze = 8'b01110111; in_valid=1; #10; in_valid=0; #10;
+    maze = 8'b01000011; in_valid=1; #10; in_valid=0; #10;
+    maze = 8'b01110011; in_valid=1; #10; in_valid=0; #20;
+    #270
     $finish;
 end
 
