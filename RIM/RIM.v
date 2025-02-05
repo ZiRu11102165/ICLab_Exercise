@@ -142,6 +142,8 @@ module RIM(
                     for (i = 0; i <= 15; i = i+1) begin
                         $display("store_ans_row[%d] ", store_ans_row[i]);
                         $display("store_ans_col[%d] ", store_ans_col[i]);
+                        out_row <= store_ans_row[i];
+                        out_col <= store_ans_col[i];
                     end
                 end
             end
