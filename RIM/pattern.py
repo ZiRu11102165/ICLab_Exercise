@@ -6,7 +6,7 @@ import os
 # 第一區 64個輸入 = 8x8 Maze建立
 # 第二區 x的值 * 15 (3bit表示)
 # 第三區 y的值 * 15 (3bit表示)
-# 最終顯示 ： Mode(1)Vgs(6)Vds(6)W(6)GT(4) 
+# 最終顯示 ： Maze(64)x(15*3)y(15*3)
 #####   Pattern 格式    ######
 
 def SaveFile(pattern_all):
@@ -175,8 +175,8 @@ def main():
             comb_pattern = comb_pattern.replace('\n', '')
             print("每筆資料的len = ", len(comb_pattern))
             pattern_all.append(comb_pattern)
-        elif (record_count == 100):
-            break
+            if (record_count == 100):
+                break
     pattern_all = '\n'.join(pattern_all)
 
     SaveFile(pattern_all)
